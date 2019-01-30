@@ -6,12 +6,6 @@ class Sphinx < Formula
   revision 1
   head "https://github.com/sphinxsearch/sphinx.git"
 
-  bottle do
-    sha256 "d1b6c4ccb5a7abda11efcb751385ebd7475257d5450057e2b95eaf980b3577d5" => :mojave
-    sha256 "2000da0557815ad4b78c3fd743d26400dde1c20a4fc4a152c583d95e989b2435" => :high_sierra
-    sha256 "c7f8c90458e53dbf84afd90b7640b9a37acec72dae091f8afeee737ed01abc50" => :sierra
-  end
-
   resource "stemmer" do
     url "https://github.com/snowballstem/snowball.git",
         :revision => "9b58e92c965cd7e3208247ace3cc00d173397f3c"
