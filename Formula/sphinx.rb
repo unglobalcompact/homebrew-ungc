@@ -27,6 +27,9 @@ class Sphinx < Formula
       --with-pgsql
     ]
 
+    require "pp"
+    pp args
+
     system "./configure", *args
     system "make", "install"
   end
