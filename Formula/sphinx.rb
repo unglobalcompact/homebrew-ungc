@@ -11,6 +11,7 @@ class Sphinx < Formula
         :revision => "9b58e92c965cd7e3208247ace3cc00d173397f3c"
   end
 
+  depends_on "mysql"
   depends_on "postgresql@10"
 
   def install
@@ -24,11 +25,9 @@ class Sphinx < Formula
       --disable-dependency-tracking
       --localstatedir=#{var}
       --with-libstemmer
+      --with-mysql
       --with-pgsql
     ]
-
-    require "pp"
-    pp args
 
     system "./configure", *args
     system "make", "install"
