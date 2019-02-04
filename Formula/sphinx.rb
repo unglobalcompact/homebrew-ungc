@@ -11,7 +11,7 @@ class Sphinx < Formula
         :revision => "9b58e92c965cd7e3208247ace3cc00d173397f3c"
   end
 
-  depends_on "mysql"
+  depends_on "mysql@5.7"
   depends_on "postgresql@10"
 
   def install
